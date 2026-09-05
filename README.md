@@ -3,30 +3,37 @@
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![Gemini 2.5 Flash](https://img.shields.io/badge/AI%20Engine-Gemini%202.5%20Flash-green.svg)](https://aistudio.google.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![GitHub Repository](https://img.shields.io/badge/GitHub-kumaradi9508%2Freconmate--ai--agent-181717?logo=github)](https://github.com/kumaradi9508/reconmate-ai-agent)
 
-> **ReconMate** is an intelligent, automated financial reconciliation engine and AI agent designed for payment platforms like **Razorpay**. It bridges the gap between merchant ledgers and bank settlement statements using a two-pass deterministic matching pipeline combined with an LLM reasoning layer powered by **Google Gemini**.
+> **ReconMate** is an intelligent, automated financial reconciliation engine and AI agent designed for payment platforms like **Razorpay**. It bridges the gap between merchant transaction ledgers and bank settlement statements using a two-pass deterministic matching pipeline combined with an autonomous LLM reasoning layer powered by **Google Gemini**.
+
+---
+
+## 📊 Interactive Dashboard Preview
+
+![ReconMate Dashboard](assets/dashboard.png)
 
 ---
 
 ## 🌟 Key Highlights
 
-- 🔍 **Two-Pass Reconciliation Engine**:
-  - **Pass 1 (Exact Match)**: Matches transactions via unique references in bank narrations while validating fee tolerances.
-  - **Pass 2 (Fuzzy Match)**: Resolves settlement delays (1–3 days) and payment gateway fee deductions (0–4%) when reference numbers are missing or obscured.
-- 🚨 **Honest Exception Classification**: Transparently flags anomalies instead of hiding them:
+- 🔍 **Two-Pass Deterministic Reconciliation Engine**:
+  - **Pass 1 (Exact Match)**: Matches transactions via unique reference numbers in bank narration text while enforcing gateway fee tolerances (0–4%).
+  - **Pass 2 (Fuzzy Match)**: Resolves settlement timing delays (1–3 business days) and payment gateway fee deductions when reference numbers are missing or truncated.
+- 🚨 **Honest Exception Classification**: Transparently flags and categorizes anomalies:
   - `AMOUNT_MISMATCH` (e.g., unrecorded partial refunds, unexpected fee adjustments)
-  - `MISSING_SETTLEMENT` (payments in transit or failed settlements)
-  - `DUPLICATE_SETTLEMENT` (duplicate bank credits)
+  - `MISSING_SETTLEMENT` (payments in transit or failed gateway settlements)
+  - `DUPLICATE_SETTLEMENT` (duplicate bank credits / potential double payouts)
   - `UNEXPLAINED_BANK_CREDIT` (bank credits missing from merchant ledgers)
-- 🤖 **Gemini AI Agent Layer**:
-  - Automatically synthesizes an **Executive Summary** for finance managers.
+- 🤖 **Gemini AI Agent Reasoning Layer**:
+  - Automatically synthesizes an **Executive Summary** for finance leaders.
   - Prescribes **Concrete Next Steps** for every exception.
-  - Drafts **ready-to-send messages** for operations teams, banks, or merchants.
-  - **Fallback Resilience**: Falls back to deterministic rule-based generation if offline or rate-limited.
+  - Drafts **ready-to-dispatch communications** (1-click copy) for bank ops, merchants, and finance teams.
+  - **Fallback Resilience**: Multi-model fallback (`gemini-2.5-flash`, `gemini-1.5-flash`, `gemini-2.0-flash`) with contextual rule-based reasoning if offline.
 - 🌐 **Interactive Live Dashboard & Backend**:
-  - Dark-mode responsive web interface with live stats and tables.
-  - Embedded **Interactive Gemini Assistant** allowing natural language queries on reconciliation data.
-  - **One-Click Re-run**: Re-trigger synthetic data generation, matching, and AI evaluation on demand.
+  - Dark-mode responsive fintech UI with real-time KPI metrics and search filters.
+  - Embedded **Interactive Gemini Copilot** allowing natural language queries on reconciliation data.
+  - **One-Click Re-run**: Re-trigger synthetic data generation, matching, and AI evaluation directly from the UI.
 
 ---
 
@@ -34,14 +41,14 @@
 
 ```mermaid
 flowchart TD
-    A[generate_data.py] -->|Generates| B[ledger.csv]
-    A -->|Generates| C[bank_statement.csv]
+    A[generate_data.py] -->|Generates 65+ Records| B[ledger.csv]
+    A -->|Generates Settlements| C[bank_statement.csv]
     
     B & C --> D[reconcile.py Engine]
     
-    subgraph Reconciliation Engine
+    subgraph Reconciliation Pipeline
         D -->|Pass 1| E[Exact Reference Match]
-        D -->|Pass 2| F[Fuzzy Amount & Date Proximity Match]
+        D -->|Pass 2| F[Fuzzy Date & Fee Tolerance Match]
         D -->|Pass 3| G[Exception Classifier]
     end
     
@@ -49,10 +56,10 @@ flowchart TD
     G --> H
     
     H --> I[ai_agent.py Layer]
-    I -->|Gemini 2.5 Flash| J[report_with_actions.json]
-    I -->|Injected UI| K[report.html Dashboard]
+    I -->|Google Gemini 2.5 Flash| J[report_with_actions.json]
+    I -->|render_dashboard.py| K[report.html Dashboard]
     
-    K <--> L[server.py Backend Server]
+    K <--> L[server.py Multi-Threaded Backend]
     L <--> M[Live Gemini API Queries]
 ```
 
@@ -62,18 +69,22 @@ flowchart TD
 
 ```
 ├── .env.example              # Environment variables template
-├── .gitignore                # Git ignore rules (protects secrets)
-├── README.md                 # Project documentation
+├── .gitignore                # Git ignore rules (protects API keys)
+├── LICENSE                   # MIT License
+├── README.md                 # Project documentation & walkthrough
 ├── requirements.txt          # Python dependencies
 ├── generate_data.py          # Synthetic dataset generator (65+ records)
 ├── reconcile.py              # Two-pass reconciliation engine
 ├── ai_agent.py               # Google Gemini AI agent layer
-├── server.py                 # Interactive HTTP server & API backend
+├── render_dashboard.py       # Modern dark-mode dashboard HTML generator
+├── server.py                 # Multi-threaded server with live Gemini endpoints
 ├── ledger.csv                # Sample Razorpay-side payment ledger
 ├── bank_statement.csv        # Sample Bank settlement statement
 ├── report.json               # Raw reconciliation matching results
 ├── report_with_actions.json  # Enriched report with Gemini AI actions
-└── report.html               # Interactive web dashboard
+├── report.html               # Interactive web dashboard
+└── assets/
+    └── dashboard.png         # High-resolution dashboard screenshot
 ```
 
 ---
@@ -103,11 +114,11 @@ PORT=8000
 ```
 *(Get a free API key at [Google AI Studio](https://aistudio.google.com/apikey))*
 
-### 4. Run the Pipeline
-Execute the full reconciliation pipeline end-to-end:
+### 4. Run the Pipeline (CLI)
+Execute the reconciliation pipeline end-to-end:
 
 ```bash
-# Step 1: Generate synthetic transaction data
+# Step 1: Generate synthetic transaction data (65+ records)
 python generate_data.py
 
 # Step 2: Reconcile ledger against bank statements
@@ -120,33 +131,50 @@ python ai_agent.py
 ### 5. Launch the Interactive Dashboard
 Start the local server:
 ```bash
-python server.py
+python server.py --open
 ```
-Open **[http://localhost:8000](http://localhost:8000)** in your browser to view the interactive dashboard!
+
+Open either link in your browser:
+- **Localhost**: [http://localhost:8000](http://localhost:8000)
+- **Direct IP**: [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
 ---
 
-## 📊 Dashboard Preview & Features
+## 💡 Troubleshooting: Localhost Not Opening?
 
-- **Summary Cards**: Real-time Match Rate (%), Amount Reconciled (₹), Exceptions Count.
-- **Matched Transactions Table**: Exact vs Fuzzy match breakdowns with deducted fee calculations.
-- **Exceptions Table**: Anomaly type, transaction ID / bank reference, and detailed reason.
-- **AI Action Center**: Action items and draft communications synthesized by Gemini.
-- **Live Gemini Chat Assistant**: Ask ad-hoc questions regarding any settlement or transaction directly in the UI.
+If `http://localhost:8000` is not opening on your computer, check the following:
+
+1. **Make sure the server is running:**
+   ```bash
+   python server.py
+   ```
+   Keep the terminal window open while viewing the dashboard.
+
+2. **Try the direct IP link instead of localhost:**
+   On some Windows installations, `localhost` resolves to IPv6 (`::1`). Open **[http://127.0.0.1:8000](http://127.0.0.1:8000)** directly in your browser.
+
+3. **Port 8000 already in use?**
+   `server.py` automatically detects occupied ports and binds to the next available port (`8001`, `8002`, etc.), displaying the exact active URL in the terminal. You can also specify a custom port:
+   ```bash
+   python server.py --port 8080
+   ```
+
+4. **View without running a server:**
+   You can double-click `report.html` to open the full dashboard statically in any web browser (`file:///.../report.html`).
 
 ---
 
-## 🔌 API Endpoints
+## 🔌 REST API Endpoints
 
-The built-in server (`server.py`) provides the following REST endpoints:
+The built-in multi-threaded server (`server.py`) provides the following endpoints:
 
 | Endpoint | Method | Description |
 | :--- | :--- | :--- |
-| `/` or `/report.html` | `GET` | Serves the interactive reconciliation UI |
-| `/api/status` | `GET` | Health check and Gemini connection status |
-| `/api/data` | `GET` | Returns `report_with_actions.json` data |
-| `/api/reconcile` | `POST` | Re-executes the pipeline and returns fresh results |
-| `/api/ask` | `POST` | Queries Gemini with context from the reconciliation report |
+| `/` or `/report.html` | `GET` | Serves the interactive reconciliation UI dashboard |
+| `/api/status` | `GET` | Health check, server status, and Gemini connection info |
+| `/api/data` | `GET` | Returns `report_with_actions.json` structured data |
+| `/api/reconcile` | `POST` | Re-executes the full pipeline and returns fresh results |
+| `/api/ask` | `POST` | Queries Gemini Copilot with live context from the reconciliation report |
 
 ---
 
@@ -157,4 +185,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 ### 👨‍💻 Author
-- **Aditya Kumar** - [GitHub](https://github.com/kumaradi9508)
+- **Aditya Kumar** - [GitHub Profile](https://github.com/kumaradi9508)

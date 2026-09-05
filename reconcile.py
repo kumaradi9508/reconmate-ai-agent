@@ -196,56 +196,7 @@ def reconcile(ledger, bank):
     return {"summary": summary, "matched": matched, "exceptions": exceptions}
 
 
-def render_html(result):
-    s = result["summary"]
-    rows_matched = "".join(
-        f"<tr><td>{m['transaction_id']}</td><td>{m['ledger_amount']:.2f}</td>"
-        f"<td>{m['bank_amount']:.2f}</td><td>{m['match_type']}</td><td>{m['fee_pct']}%</td></tr>"
-        for m in result["matched"]
-    )
-    rows_exceptions = "".join(
-        f"<tr><td>{e['type']}</td><td>{e.get('transaction_id', e.get('bank_ref',''))}</td>"
-        f"<td>{e['reason']}</td></tr>"
-        for e in result["exceptions"]
-    )
-    html = f"""<!DOCTYPE html>
-<html><head><meta charset="utf-8"><title>ReconMate Report</title>
-<style>
-body {{ font-family: -apple-system, Arial, sans-serif; background:#0b0f14; color:#e6edf3; padding:32px; }}
-h1 {{ color:#7ee787; }}
-.stats {{ display:flex; gap:16px; margin-bottom:24px; flex-wrap:wrap; }}
-.card {{ background:#161b22; border:1px solid #30363d; border-radius:10px; padding:16px 20px; min-width:160px; }}
-.card .num {{ font-size:28px; font-weight:700; color:#7ee787; }}
-.card .label {{ font-size:12px; color:#8b949e; text-transform:uppercase; }}
-table {{ width:100%; border-collapse: collapse; margin-bottom:32px; font-size:13px; }}
-th, td {{ border-bottom:1px solid #30363d; padding:8px 10px; text-align:left; }}
-th {{ color:#8b949e; text-transform:uppercase; font-size:11px; }}
-tr:hover {{ background:#161b22; }}
-.exception-row {{ color:#ffa657; }}
-h2 {{ border-bottom:1px solid #30363d; padding-bottom:8px; }}
-</style></head><body>
-<h1>ReconMate — Reconciliation Report</h1>
-<div class="stats">
-  <div class="card"><div class="num">{s['match_rate_pct']}%</div><div class="label">Match Rate</div></div>
-  <div class="card"><div class="num">{s['matched_count']}/{s['total_ledger_records']}</div><div class="label">Records Matched</div></div>
-  <div class="card"><div class="num">{s['amount_reconciled_pct']}%</div><div class="label">Amount Reconciled</div></div>
-  <div class="card"><div class="num">{s['exception_count']}</div><div class="label">Exceptions</div></div>
-  <div class="card"><div class="num">₹{s['matched_amount']:,.0f}</div><div class="label">Amount Matched</div></div>
-</div>
-
-<h2>Matched Transactions ({s['matched_count']})</h2>
-<table>
-<tr><th>Transaction ID</th><th>Ledger Amount</th><th>Bank Amount</th><th>Match Type</th><th>Fee %</th></tr>
-{rows_matched}
-</table>
-
-<h2>Exceptions ({s['exception_count']}) — needs a human</h2>
-<table>
-<tr><th>Type</th><th>Reference</th><th>Reason</th></tr>
-{rows_exceptions}
-</table>
-</body></html>"""
-    return html
+from render_dashboard import render_dashboard
 
 
 if __name__ == "__main__":
@@ -257,7 +208,8 @@ if __name__ == "__main__":
         json.dump(result, f, indent=2)
 
     with open("report.html", "w", encoding="utf-8") as f:
-        f.write(render_html(result))
+        f.write(render_dashboard(result, source="rule_based_fallback"))
 
     print(json.dumps(result["summary"], indent=2))
     print("\nWritten: report.json, report.html")
+

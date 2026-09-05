@@ -139,114 +139,7 @@ Exceptions:
     return json.loads(text)
 
 
-def inject_ai_section_into_html(html_path, ai_result, source):
-    with open(html_path, encoding="utf-8") as f:
-        html = f.read()
-
-    rows = "".join(
-        f"<tr><td><code>{a.get('reference','')}</code></td>"
-        f"<td>{a.get('recommended_action','')}</td>"
-        f"<td><span style='color:#a5d6ff;'>{a.get('draft_message','')}</span></td>"
-        f"<td><button onclick=\"askGeminiAbout('{a.get('reference','')}')\" style='background:#238636;color:white;border:none;padding:4px 8px;border-radius:4px;cursor:pointer;font-size:11px;'>Ask AI</button></td></tr>"
-        for a in ai_result.get("exception_actions", [])
-    )
-
-    badge = "Gemini 2.5 Flash (Live Connected)" if source == "gemini" else "Rule-based fallback"
-    badge_color = "#238636" if source == "gemini" else "#d29922"
-
-    section = f"""
-<div style="display:flex; justify-content:space-between; align-items:center; margin-top:20px; border-bottom:1px solid #30363d; padding-bottom:8px;">
-  <h2>AI Recommended Actions <span style="font-size:12px; background:{badge_color}; color:#fff; padding:3px 8px; border-radius:12px; margin-left:10px; font-weight:normal;">{badge}</span></h2>
-  <button id="rerunBtn" onclick="triggerRerun()" style="background:#1f6feb; color:white; border:none; padding:8px 14px; border-radius:6px; font-weight:600; cursor:pointer;">⚡ Re-run Pipeline Live</button>
-</div>
-
-<div style="background:#161b22; border:1px solid #30363d; border-radius:8px; padding:16px; margin:16px 0;">
-  <div style="font-size:12px; color:#8b949e; text-transform:uppercase; margin-bottom:6px; font-weight:600;">Executive Summary</div>
-  <p style="color:#e6edf3; margin:0; line-height:1.5;">{ai_result.get('executive_summary','')}</p>
-</div>
-
-<table>
-<tr><th>Reference</th><th>Recommended Action</th><th>Draft Message</th><th>Action</th></tr>
-{rows}
-</table>
-
-<!-- Interactive Gemini Assistant Section -->
-<div style="margin-top:36px; background:#161b22; border:1px solid #30363d; border-radius:10px; padding:20px;">
-  <h3 style="margin-top:0; color:#58a6ff; display:flex; align-items:center; gap:8px;">
-    🤖 Interactive Gemini Assistant
-    <span style="font-size:11px; color:#8b949e; font-weight:normal;">(Server Backend Connected)</span>
-  </h3>
-  <p style="color:#8b949e; font-size:13px; margin-bottom:12px;">Ask any question about reconciling these payments, exceptions, or specific transactions:</p>
-  <div style="display:flex; gap:10px; margin-bottom:12px;">
-    <input id="aiQueryInput" type="text" placeholder="e.g. Why did pay_100003 mismatch? Or how should I handle unrecorded refunds?" 
-           style="flex:1; background:#0d1117; border:1px solid #30363d; border-radius:6px; padding:10px 14px; color:#e6edf3; font-size:13px; outline:none;" 
-           onkeydown="if(event.key==='Enter') sendGeminiQuery()" />
-    <button id="askBtn" onclick="sendGeminiQuery()" style="background:#238636; color:white; border:none; padding:10px 18px; border-radius:6px; font-weight:600; cursor:pointer;">Ask Gemini</button>
-  </div>
-  <div id="aiResponseBox" style="display:none; background:#0d1117; border:1px solid #30363d; border-radius:6px; padding:14px; color:#e6edf3; font-size:13px; line-height:1.6;"></div>
-</div>
-
-<script>
-async function triggerRerun() {{
-  const btn = document.getElementById('rerunBtn');
-  btn.disabled = true;
-  btn.innerText = '⏳ Processing with Gemini...';
-  try {{
-    const res = await fetch('/api/reconcile', {{ method: 'POST' }});
-    const data = await res.json();
-    if (data.success) {{
-      window.location.reload();
-    }} else {{
-      alert('Error running pipeline: ' + data.error);
-    }}
-  }} catch (err) {{
-    alert('Server request failed: ' + err.message);
-  }} finally {{
-    btn.disabled = false;
-    btn.innerText = '⚡ Re-run Pipeline Live';
-  }}
-}}
-
-async function askGeminiAbout(ref) {{
-  document.getElementById('aiQueryInput').value = 'Please analyze transaction ' + ref + ' and explain what happened and what specific steps I should take.';
-  sendGeminiQuery(ref);
-}}
-
-async function sendGeminiQuery(reference) {{
-  const input = document.getElementById('aiQueryInput');
-  const query = input.value.trim();
-  if (!query) return;
-  
-  const box = document.getElementById('aiResponseBox');
-  const btn = document.getElementById('askBtn');
-  box.style.display = 'block';
-  box.innerHTML = '<span style="color:#8b949e;">Thinking with Gemini 2.5 Flash...</span>';
-  btn.disabled = true;
-
-  try {{
-    const res = await fetch('/api/ask', {{
-      method: 'POST',
-      headers: {{ 'Content-Type': 'application/json' }},
-      body: JSON.stringify({{ query: query, reference: reference || '' }})
-    }});
-    const data = await res.json();
-    if (data.success) {{
-      box.innerHTML = '<strong>Gemini:</strong> ' + data.answer.replace(/\\n/g, '<br>');
-    }} else {{
-      box.innerHTML = '<span style="color:#f85149;">Error: ' + data.error + '</span>';
-    }}
-  }} catch (err) {{
-    box.innerHTML = '<span style="color:#f85149;">Network Error: ' + err.message + '</span>';
-  }} finally {{
-    btn.disabled = false;
-  }}
-}}
-</script>
-"""
-    html = html.replace("</body>", section + "</body>")
-
-    with open(html_path, "w", encoding="utf-8") as f:
-        f.write(html)
+from render_dashboard import render_dashboard
 
 
 def main():
@@ -270,7 +163,8 @@ def main():
     with open("report_with_actions.json", "w", encoding="utf-8") as f:
         json.dump(report, f, indent=2)
 
-    inject_ai_section_into_html("report.html", ai_result, source)
+    with open("report.html", "w", encoding="utf-8") as f:
+        f.write(render_dashboard(report, source=source))
 
     print(f"Action source: {source}")
     print(f"Executive summary: {ai_result.get('executive_summary')}")
@@ -279,3 +173,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
