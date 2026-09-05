@@ -257,7 +257,8 @@ def start_server(port=8000, auto_open=False):
     
     server = None
     selected_port = port
-    max_tries = 10
+    is_cloud_env = bool(os.environ.get("PORT") or os.environ.get("RENDER"))
+    max_tries = 1 if is_cloud_env else 10
 
     for offset in range(max_tries):
         test_port = port + offset
@@ -285,10 +286,12 @@ def start_server(port=8000, auto_open=False):
     print(f"  [+] Gemini Engine: {masked}")
     print(f"  [+] Localhost:    {url_local}")
     print(f"  [+] Direct IP:    {url_ip}")
+    if is_cloud_env:
+        print(f"  [+] Cloud Port:   {selected_port}")
     print("="*60)
     print("  Press Ctrl+C to stop server.\n")
 
-    if auto_open:
+    if auto_open and not is_cloud_env:
         try:
             webbrowser.open(url_local)
         except Exception:
@@ -303,11 +306,17 @@ def start_server(port=8000, auto_open=False):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="ReconMate Interactive Server")
-    parser.add_argument("--port", "-p", type=int, default=None, help="Port to listen on (default 8000 or .env)")
+    parser.add_argument("--port", "-p", type=int, default=None, help="Port to listen on (default 8000, $PORT, or .env)")
     parser.add_argument("--open", "-o", action="store_true", help="Automatically open browser on start")
     args = parser.parse_args()
 
     port = args.port
+    if port is None and os.environ.get("PORT"):
+        try:
+            port = int(os.environ["PORT"])
+        except ValueError:
+            pass
+
     if port is None:
         if os.path.exists(".env"):
             with open(".env", "r", encoding="utf-8") as f:
@@ -321,3 +330,4 @@ if __name__ == "__main__":
         port = 8000
 
     start_server(port=port, auto_open=args.open)
+

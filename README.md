@@ -128,7 +128,7 @@ python reconcile.py
 python ai_agent.py
 ```
 
-### 5. Launch the Interactive Dashboard
+### 5. Launch the Interactive Dashboard (Local)
 Start the local server:
 ```bash
 python server.py --open
@@ -137,6 +137,34 @@ python server.py --open
 Open either link in your browser:
 - **Localhost**: [http://localhost:8000](http://localhost:8000)
 - **Direct IP**: [http://127.0.0.1:8000](http://127.0.0.1:8000)
+
+---
+
+## ☁️ Deploy to Render (Cloud Hosting)
+
+ReconMate is configured for free cloud hosting on **Render** (`render.yaml` included).
+
+### Method A: Connect GitHub to Render (Recommended)
+1. Log in to [Render Dashboard](https://dashboard.render.com/).
+2. Click **New +** ➔ **Web Service**.
+3. Connect your GitHub repository: `kumaradi9508/reconmate-ai-agent`.
+4. Configure the service settings:
+   - **Name**: `reconmate-ai-agent`
+   - **Runtime**: `Python 3`
+   - **Build Command**: `pip install -r requirements.txt && python generate_data.py && python reconcile.py && python ai_agent.py`
+   - **Start Command**: `python server.py`
+   - **Plan**: `Free`
+5. Under **Environment Variables**, add:
+   - `GOOGLE_API_KEY`: *(Your Google Gemini API Key)*
+   - `PYTHON_VERSION`: `3.10.14`
+6. Click **Deploy Web Service** — Render will build and host your dashboard live!
+
+### Method B: Render Blueprint (Infrastructure as Code)
+1. In Render, select **New +** ➔ **Blueprint**.
+2. Select your `reconmate-ai-agent` repository.
+3. Render automatically parses `render.yaml`, configures the build and start commands, and prompts for your `GOOGLE_API_KEY`.
+4. Click **Apply** to deploy.
+
 
 ---
 
