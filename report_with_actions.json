@@ -548,119 +548,119 @@
     }
   ],
   "ai_actions": {
-    "executive_summary": "This payment reconciliation batch shows a 70.8% match rate by record count and 69.7% by total amount. There are 22 exceptions, primarily consisting of significant amount mismatches suggesting unrecorded partial refunds/credits, a few missing ledger settlements, and several unexplained bank credits that require manual investigation.",
+    "executive_summary": "46/65 transactions reconciled (70.8% match rate, 69.7% of value). 22 exceptions need manual review \u2014 see recommended actions below.",
     "exception_actions": [
       {
         "reference": "pay_100003",
-        "recommended_action": "Investigate payment gateway or customer records for partial refunds or credits related to this transaction.",
-        "draft_message": "Transaction pay_100003 shows a significant amount discrepancy. Please check if a partial refund or credit was processed that is not yet reflected in our ledger."
+        "recommended_action": "Check for a partial refund or fee change not reflected in the ledger.",
+        "draft_message": "Hi team, transaction pay_100003 settled for 15736.62 instead of the expected 22326.05. Was there a refund or extra fee applied?"
       },
       {
         "reference": "pay_100010",
-        "recommended_action": "Investigate payment gateway or customer records for partial refunds or credits related to this transaction.",
-        "draft_message": "Transaction pay_100010 shows a significant amount discrepancy. Please check if a partial refund or credit was processed that is not yet reflected in our ledger."
+        "recommended_action": "Check for a partial refund or fee change not reflected in the ledger.",
+        "draft_message": "Hi team, transaction pay_100010 settled for 3910.65 instead of the expected 2598.57. Was there a refund or extra fee applied?"
       },
       {
         "reference": "pay_100014",
-        "recommended_action": "Investigate payment gateway or customer records for partial refunds or credits related to this transaction.",
-        "draft_message": "Transaction pay_100014 shows a significant amount discrepancy. Please check if a partial refund or credit was processed that is not yet reflected in our ledger."
+        "recommended_action": "Check for a partial refund or fee change not reflected in the ledger.",
+        "draft_message": "Hi team, transaction pay_100014 settled for 12579.52 instead of the expected 17673.38. Was there a refund or extra fee applied?"
       },
       {
         "reference": "pay_100018",
-        "recommended_action": "Investigate payment gateway or customer records for partial refunds or credits related to this transaction.",
-        "draft_message": "Transaction pay_100018 shows a significant amount discrepancy. Please check if a partial refund or credit was processed that is not yet reflected in our ledger."
+        "recommended_action": "Check for a partial refund or fee change not reflected in the ledger.",
+        "draft_message": "Hi team, transaction pay_100018 settled for 3810.82 instead of the expected 16271.28. Was there a refund or extra fee applied?"
       },
       {
         "reference": "pay_100020",
-        "recommended_action": "Investigate payment gateway or customer records for partial refunds or credits related to this transaction.",
-        "draft_message": "Transaction pay_100020 shows a significant amount discrepancy. Please check if a partial refund or credit was processed that is not yet reflected in our ledger."
+        "recommended_action": "Check for a partial refund or fee change not reflected in the ledger.",
+        "draft_message": "Hi team, transaction pay_100020 settled for 2980.06 instead of the expected 6894.71. Was there a refund or extra fee applied?"
       },
       {
         "reference": "pay_100025",
-        "recommended_action": "Trace the payment status through the gateway or contact the customer for confirmation of payment.",
-        "draft_message": "Transaction pay_100025 is recorded in our ledger but has no corresponding bank settlement. Please check the payment gateway status or confirm if funds are still in transit."
+        "recommended_action": "Escalate to payment gateway support to confirm settlement status.",
+        "draft_message": "Hi team, we can't find a bank settlement for pay_100025 after the normal window. Can you confirm if this payment is still in transit or failed?"
       },
       {
         "reference": "pay_100042",
-        "recommended_action": "Investigate payment gateway or customer records for partial refunds or credits related to this transaction.",
-        "draft_message": "Transaction pay_100042 shows a significant amount discrepancy. Please check if a partial refund or credit was processed that is not yet reflected in our ledger."
+        "recommended_action": "Check for a partial refund or fee change not reflected in the ledger.",
+        "draft_message": "Hi team, transaction pay_100042 settled for 6957.15 instead of the expected 19192.69. Was there a refund or extra fee applied?"
       },
       {
         "reference": "pay_100052",
-        "recommended_action": "Trace the payment status through the gateway or contact the customer for confirmation of payment.",
-        "draft_message": "Transaction pay_100052 is recorded in our ledger but has no corresponding bank settlement. Please check the payment gateway status or confirm if funds are still in transit."
+        "recommended_action": "Escalate to payment gateway support to confirm settlement status.",
+        "draft_message": "Hi team, we can't find a bank settlement for pay_100052 after the normal window. Can you confirm if this payment is still in transit or failed?"
       },
       {
         "reference": "pay_100055",
-        "recommended_action": "Investigate payment gateway or customer records for partial refunds or credits related to this transaction.",
-        "draft_message": "Transaction pay_100055 shows a significant amount discrepancy. Please check if a partial refund or credit was processed that is not yet reflected in our ledger."
+        "recommended_action": "Check for a partial refund or fee change not reflected in the ledger.",
+        "draft_message": "Hi team, transaction pay_100055 settled for 4859.19 instead of the expected 21623.15. Was there a refund or extra fee applied?"
       },
       {
         "reference": "pay_100013",
-        "recommended_action": "Investigate payment gateway or customer records for partial refunds or credits related to this transaction.",
-        "draft_message": "Transaction pay_100013 shows a significant amount discrepancy. Please check if a partial refund or credit was processed that is not yet reflected in our ledger."
+        "recommended_action": "Check for a partial refund or fee change not reflected in the ledger.",
+        "draft_message": "Hi team, transaction pay_100013 settled for 14581.53 instead of the expected 20769.24. Was there a refund or extra fee applied?"
       },
       {
         "reference": "pay_100015",
-        "recommended_action": "Investigate payment gateway or customer records for partial refunds or credits related to this transaction.",
-        "draft_message": "Transaction pay_100015 shows a significant amount discrepancy. Please check if a partial refund or credit was processed that is not yet reflected in our ledger."
+        "recommended_action": "Check for a partial refund or fee change not reflected in the ledger.",
+        "draft_message": "Hi team, transaction pay_100015 settled for 12263.39 instead of the expected 19372.09. Was there a refund or extra fee applied?"
       },
       {
         "reference": "pay_100021",
-        "recommended_action": "Investigate payment gateway or customer records for partial refunds or credits related to this transaction.",
-        "draft_message": "Transaction pay_100021 shows a significant amount discrepancy. Please check if a partial refund or credit was processed that is not yet reflected in our ledger."
+        "recommended_action": "Check for a partial refund or fee change not reflected in the ledger.",
+        "draft_message": "Hi team, transaction pay_100021 settled for 3275.89 instead of the expected 5646.46. Was there a refund or extra fee applied?"
       },
       {
         "reference": "pay_100023",
-        "recommended_action": "Investigate payment gateway or customer records for partial refunds or credits related to this transaction.",
-        "draft_message": "Transaction pay_100023 shows a significant amount discrepancy. Please check if a partial refund or credit was processed that is not yet reflected in our ledger."
+        "recommended_action": "Check for a partial refund or fee change not reflected in the ledger.",
+        "draft_message": "Hi team, transaction pay_100023 settled for 3120.46 instead of the expected 5432.37. Was there a refund or extra fee applied?"
       },
       {
         "reference": "pay_100031",
-        "recommended_action": "Investigate payment gateway or customer records for partial refunds or credits related to this transaction.",
-        "draft_message": "Transaction pay_100031 shows a significant amount discrepancy. Please check if a partial refund or credit was processed that is not yet reflected in our ledger."
+        "recommended_action": "Check for a partial refund or fee change not reflected in the ledger.",
+        "draft_message": "Hi team, transaction pay_100031 settled for 9832.99 instead of the expected 13322.04. Was there a refund or extra fee applied?"
       },
       {
         "reference": "pay_100034",
-        "recommended_action": "Investigate payment gateway or customer records for partial refunds or credits related to this transaction.",
-        "draft_message": "Transaction pay_100034 shows a significant amount discrepancy. Please check if a partial refund or credit was processed that is not yet reflected in our ledger."
+        "recommended_action": "Check for a partial refund or fee change not reflected in the ledger.",
+        "draft_message": "Hi team, transaction pay_100034 settled for 235.65 instead of the expected 280.48. Was there a refund or extra fee applied?"
       },
       {
         "reference": "pay_100039",
-        "recommended_action": "Investigate payment gateway or customer records for partial refunds or credits related to this transaction.",
-        "draft_message": "Transaction pay_100039 shows a significant amount discrepancy. Please check if a partial refund or credit was processed that is not yet reflected in our ledger."
+        "recommended_action": "Check for a partial refund or fee change not reflected in the ledger.",
+        "draft_message": "Hi team, transaction pay_100039 settled for 1736.43 instead of the expected 2974.32. Was there a refund or extra fee applied?"
       },
       {
         "reference": "pay_100046",
-        "recommended_action": "Investigate payment gateway or customer records for partial refunds or credits related to this transaction.",
-        "draft_message": "Transaction pay_100046 shows a significant amount discrepancy. Please check if a partial refund or credit was processed that is not yet reflected in our ledger."
+        "recommended_action": "Check for a partial refund or fee change not reflected in the ledger.",
+        "draft_message": "Hi team, transaction pay_100046 settled for 8849.54 instead of the expected 16316.98. Was there a refund or extra fee applied?"
       },
       {
         "reference": "pay_100053",
-        "recommended_action": "Investigate payment gateway or customer records for partial refunds or credits related to this transaction.",
-        "draft_message": "Transaction pay_100053 shows a significant amount discrepancy. Please check if a partial refund or credit was processed that is not yet reflected in our ledger."
+        "recommended_action": "Check for a partial refund or fee change not reflected in the ledger.",
+        "draft_message": "Hi team, transaction pay_100053 settled for 3318.72 instead of the expected 6226.33. Was there a refund or extra fee applied?"
       },
       {
         "reference": "pay_100061",
-        "recommended_action": "Investigate payment gateway or customer records for partial refunds or credits related to this transaction.",
-        "draft_message": "Transaction pay_100061 shows a significant amount discrepancy. Please check if a partial refund or credit was processed that is not yet reflected in our ledger."
+        "recommended_action": "Check for a partial refund or fee change not reflected in the ledger.",
+        "draft_message": "Hi team, transaction pay_100061 settled for 15562.31 instead of the expected 24231.11. Was there a refund or extra fee applied?"
       },
       {
         "reference": "stl_200017",
-        "recommended_action": "Identify the source of this incoming bank credit and post it to the correct ledger account.",
-        "draft_message": "Bank credit stl_200017 for 5287.85 has no matching ledger entry. Please investigate its origin to ensure proper accounting."
+        "recommended_action": "Manual review needed \u2014 no ledger record matches this bank credit.",
+        "draft_message": "Hi team, we received a bank credit (stl_200017, amount 5287.85) with no matching ledger entry. Can you help identify where it came from?"
       },
       {
         "reference": "stl_300003",
-        "recommended_action": "Identify the source of this incoming bank credit and post it to the correct ledger account.",
-        "draft_message": "Bank credit stl_300003 for 725.64 has no matching ledger entry. Please investigate its origin to ensure proper accounting."
+        "recommended_action": "Manual review needed \u2014 no ledger record matches this bank credit.",
+        "draft_message": "Hi team, we received a bank credit (stl_300003, amount 725.64) with no matching ledger entry. Can you help identify where it came from?"
       },
       {
         "reference": "stl_300002",
-        "recommended_action": "Identify the source of this incoming bank credit and post it to the correct ledger account.",
-        "draft_message": "Bank credit stl_300002 for 3865.89 has no matching ledger entry. Please investigate its origin to ensure proper accounting."
+        "recommended_action": "Manual review needed \u2014 no ledger record matches this bank credit.",
+        "draft_message": "Hi team, we received a bank credit (stl_300002, amount 3865.89) with no matching ledger entry. Can you help identify where it came from?"
       }
     ]
   },
-  "ai_actions_source": "gemini"
+  "ai_actions_source": "rule_based_fallback"
 }
