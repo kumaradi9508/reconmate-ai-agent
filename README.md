@@ -1,17 +1,23 @@
 # ⚡ ReconMate — AI-Powered Financial Reconciliation Agent
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-reconmate--ai--agent.onrender.com-46E3B7?style=for-the-badge&logo=render&logoColor=white)](https://reconmate-ai-agent.onrender.com)
+
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![Gemini 2.5 Flash](https://img.shields.io/badge/AI%20Engine-Gemini%202.5%20Flash-green.svg)](https://aistudio.google.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![GitHub Repository](https://img.shields.io/badge/GitHub-kumaradi9508%2Freconmate--ai--agent-181717?logo=github)](https://github.com/kumaradi9508/reconmate-ai-agent)
 
+> 🌐 **Live Deployed App**: **[https://reconmate-ai-agent.onrender.com](https://reconmate-ai-agent.onrender.com)**  
 > **ReconMate** is an intelligent, automated financial reconciliation engine and AI agent designed for payment platforms like **Razorpay**. It bridges the gap between merchant transaction ledgers and bank settlement statements using a two-pass deterministic matching pipeline combined with an autonomous LLM reasoning layer powered by **Google Gemini**.
 
 ---
 
 ## 📊 Interactive Dashboard Preview
 
-![ReconMate Dashboard](assets/dashboard.png)
+[![Live Dashboard Demo](assets/dashboard.png)](https://reconmate-ai-agent.onrender.com)
+
+> 🚀 **Try it Live**: Click the dashboard image or visit **[https://reconmate-ai-agent.onrender.com](https://reconmate-ai-agent.onrender.com)** to test the live reconciliation dashboard!
+
 
 ---
 
@@ -140,11 +146,18 @@ Open either link in your browser:
 
 ---
 
-## ☁️ Deploy to Render (Cloud Hosting)
+## ☁️ Live Cloud Deployment (Render)
+ 
+ReconMate is deployed and running live on **Render**:
 
-ReconMate is configured for free cloud hosting on **Render** (`render.yaml` included).
+- 🔗 **Live Web Dashboard**: **[https://reconmate-ai-agent.onrender.com](https://reconmate-ai-agent.onrender.com)**
+- 🩺 **Health & Gemini Status API**: [https://reconmate-ai-agent.onrender.com/api/status](https://reconmate-ai-agent.onrender.com/api/status)
+- 📊 **Reconciliation JSON API**: [https://reconmate-ai-agent.onrender.com/api/data](https://reconmate-ai-agent.onrender.com/api/data)
 
-### Method A: Connect GitHub to Render (Recommended)
+### How to Re-Deploy or Fork on Render
+ReconMate includes complete infrastructure-as-code (`render.yaml`).
+
+#### Method A: Connect GitHub to Render
 1. Log in to [Render Dashboard](https://dashboard.render.com/).
 2. Click **New +** ➔ **Web Service**.
 3. Connect your GitHub repository: `kumaradi9508/reconmate-ai-agent`.
@@ -158,6 +171,7 @@ ReconMate is configured for free cloud hosting on **Render** (`render.yaml` incl
    - `GOOGLE_API_KEY`: *(Your Google Gemini API Key)*
    - `PYTHON_VERSION`: `3.10.14`
 6. Click **Deploy Web Service** — Render will build and host your dashboard live!
+
 
 ### Method B: Render Blueprint (Infrastructure as Code)
 1. In Render, select **New +** ➔ **Blueprint**.
