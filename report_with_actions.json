@@ -1,0 +1,666 @@
+{
+  "summary": {
+    "total_ledger_records": 65,
+    "total_bank_records": 66,
+    "matched_count": 46,
+    "exception_count": 22,
+    "match_rate_pct": 70.8,
+    "total_ledger_amount": 819908.89,
+    "matched_amount": 571694.06,
+    "amount_reconciled_pct": 69.7
+  },
+  "matched": [
+    {
+      "transaction_id": "pay_100001",
+      "ledger_amount": 16057.78,
+      "bank_amount": 15736.62,
+      "bank_ref": "stl_200001b",
+      "match_type": "exact_reference",
+      "fee_pct": 2.0
+    },
+    {
+      "transaction_id": "pay_100002",
+      "ledger_amount": 5735.63,
+      "bank_amount": 5620.92,
+      "bank_ref": "stl_200002",
+      "match_type": "exact_reference",
+      "fee_pct": 2.0
+    },
+    {
+      "transaction_id": "pay_100004",
+      "ledger_amount": 988.21,
+      "bank_amount": 968.45,
+      "bank_ref": "stl_200004",
+      "match_type": "exact_reference",
+      "fee_pct": 2.0
+    },
+    {
+      "transaction_id": "pay_100005",
+      "ledger_amount": 15130.06,
+      "bank_amount": 14827.46,
+      "bank_ref": "stl_200005",
+      "match_type": "exact_reference",
+      "fee_pct": 2.0
+    },
+    {
+      "transaction_id": "pay_100006",
+      "ledger_amount": 17592.86,
+      "bank_amount": 17241.0,
+      "bank_ref": "stl_200006",
+      "match_type": "exact_reference",
+      "fee_pct": 2.0
+    },
+    {
+      "transaction_id": "pay_100007",
+      "ledger_amount": 7099.13,
+      "bank_amount": 6957.15,
+      "bank_ref": "stl_200007",
+      "match_type": "exact_reference",
+      "fee_pct": 2.0
+    },
+    {
+      "transaction_id": "pay_100008",
+      "ledger_amount": 17513.86,
+      "bank_amount": 17163.58,
+      "bank_ref": "stl_200008",
+      "match_type": "exact_reference",
+      "fee_pct": 2.0
+    },
+    {
+      "transaction_id": "pay_100009",
+      "ledger_amount": 23938.88,
+      "bank_amount": 23460.1,
+      "bank_ref": "stl_200009",
+      "match_type": "exact_reference",
+      "fee_pct": 2.0
+    },
+    {
+      "transaction_id": "pay_100011",
+      "ledger_amount": 20216.78,
+      "bank_amount": 19812.44,
+      "bank_ref": "stl_200011",
+      "match_type": "exact_reference",
+      "fee_pct": 2.0
+    },
+    {
+      "transaction_id": "pay_100012",
+      "ledger_amount": 24333.27,
+      "bank_amount": 23846.6,
+      "bank_ref": "stl_200012",
+      "match_type": "exact_reference",
+      "fee_pct": 2.0
+    },
+    {
+      "transaction_id": "pay_100016",
+      "ledger_amount": 11444.58,
+      "bank_amount": 11215.69,
+      "bank_ref": "stl_200016",
+      "match_type": "exact_reference",
+      "fee_pct": 2.0
+    },
+    {
+      "transaction_id": "pay_100017",
+      "ledger_amount": 5395.77,
+      "bank_amount": 5287.85,
+      "bank_ref": "stl_200017b",
+      "match_type": "exact_reference",
+      "fee_pct": 2.0
+    },
+    {
+      "transaction_id": "pay_100019",
+      "ledger_amount": 13446.67,
+      "bank_amount": 13177.74,
+      "bank_ref": "stl_200019",
+      "match_type": "exact_reference",
+      "fee_pct": 2.0
+    },
+    {
+      "transaction_id": "pay_100022",
+      "ledger_amount": 996.09,
+      "bank_amount": 976.17,
+      "bank_ref": "stl_200022",
+      "match_type": "exact_reference",
+      "fee_pct": 2.0
+    },
+    {
+      "transaction_id": "pay_100024",
+      "ledger_amount": 12580.94,
+      "bank_amount": 12329.32,
+      "bank_ref": "stl_200024",
+      "match_type": "exact_reference",
+      "fee_pct": 2.0
+    },
+    {
+      "transaction_id": "pay_100026",
+      "ledger_amount": 6715.99,
+      "bank_amount": 6581.67,
+      "bank_ref": "stl_200026",
+      "match_type": "exact_reference",
+      "fee_pct": 2.0
+    },
+    {
+      "transaction_id": "pay_100028",
+      "ledger_amount": 12836.25,
+      "bank_amount": 12579.52,
+      "bank_ref": "stl_200028",
+      "match_type": "exact_reference",
+      "fee_pct": 2.0
+    },
+    {
+      "transaction_id": "pay_100029",
+      "ledger_amount": 3990.46,
+      "bank_amount": 3910.65,
+      "bank_ref": "stl_200029b",
+      "match_type": "exact_reference",
+      "fee_pct": 2.0
+    },
+    {
+      "transaction_id": "pay_100030",
+      "ledger_amount": 14990.94,
+      "bank_amount": 14691.12,
+      "bank_ref": "stl_200030",
+      "match_type": "exact_reference",
+      "fee_pct": 2.0
+    },
+    {
+      "transaction_id": "pay_100032",
+      "ledger_amount": 3040.88,
+      "bank_amount": 2980.06,
+      "bank_ref": "stl_200032",
+      "match_type": "exact_reference",
+      "fee_pct": 2.0
+    },
+    {
+      "transaction_id": "pay_100033",
+      "ledger_amount": 8636.35,
+      "bank_amount": 8463.62,
+      "bank_ref": "stl_200033",
+      "match_type": "exact_reference",
+      "fee_pct": 2.0
+    },
+    {
+      "transaction_id": "pay_100036",
+      "ledger_amount": 7601.43,
+      "bank_amount": 7449.4,
+      "bank_ref": "stl_200036",
+      "match_type": "exact_reference",
+      "fee_pct": 2.0
+    },
+    {
+      "transaction_id": "pay_100037",
+      "ledger_amount": 3990.41,
+      "bank_amount": 3910.6,
+      "bank_ref": "stl_200037",
+      "match_type": "exact_reference",
+      "fee_pct": 2.0
+    },
+    {
+      "transaction_id": "pay_100038",
+      "ledger_amount": 22978.64,
+      "bank_amount": 22519.07,
+      "bank_ref": "stl_200038",
+      "match_type": "exact_reference",
+      "fee_pct": 2.0
+    },
+    {
+      "transaction_id": "pay_100043",
+      "ledger_amount": 23681.85,
+      "bank_amount": 23208.21,
+      "bank_ref": "stl_200043",
+      "match_type": "exact_reference",
+      "fee_pct": 2.0
+    },
+    {
+      "transaction_id": "pay_100045",
+      "ledger_amount": 17308.72,
+      "bank_amount": 16962.55,
+      "bank_ref": "stl_200045",
+      "match_type": "exact_reference",
+      "fee_pct": 2.0
+    },
+    {
+      "transaction_id": "pay_100047",
+      "ledger_amount": 5772.49,
+      "bank_amount": 5657.04,
+      "bank_ref": "stl_200047",
+      "match_type": "exact_reference",
+      "fee_pct": 2.0
+    },
+    {
+      "transaction_id": "pay_100048",
+      "ledger_amount": 5906.85,
+      "bank_amount": 5788.71,
+      "bank_ref": "stl_200048",
+      "match_type": "exact_reference",
+      "fee_pct": 2.0
+    },
+    {
+      "transaction_id": "pay_100049",
+      "ledger_amount": 15851.35,
+      "bank_amount": 15534.32,
+      "bank_ref": "stl_200049",
+      "match_type": "exact_reference",
+      "fee_pct": 2.0
+    },
+    {
+      "transaction_id": "pay_100050",
+      "ledger_amount": 21518.96,
+      "bank_amount": 21088.58,
+      "bank_ref": "stl_200050",
+      "match_type": "exact_reference",
+      "fee_pct": 2.0
+    },
+    {
+      "transaction_id": "pay_100051",
+      "ledger_amount": 16790.65,
+      "bank_amount": 16454.84,
+      "bank_ref": "stl_200051",
+      "match_type": "exact_reference",
+      "fee_pct": 2.0
+    },
+    {
+      "transaction_id": "pay_100054",
+      "ledger_amount": 16542.77,
+      "bank_amount": 16211.91,
+      "bank_ref": "stl_200054",
+      "match_type": "exact_reference",
+      "fee_pct": 2.0
+    },
+    {
+      "transaction_id": "pay_100056",
+      "ledger_amount": 24607.3,
+      "bank_amount": 24115.15,
+      "bank_ref": "stl_200056",
+      "match_type": "exact_reference",
+      "fee_pct": 2.0
+    },
+    {
+      "transaction_id": "pay_100057",
+      "ledger_amount": 8614.7,
+      "bank_amount": 8442.41,
+      "bank_ref": "stl_200057",
+      "match_type": "exact_reference",
+      "fee_pct": 2.0
+    },
+    {
+      "transaction_id": "pay_100058",
+      "ledger_amount": 13499.89,
+      "bank_amount": 13229.89,
+      "bank_ref": "stl_200058",
+      "match_type": "exact_reference",
+      "fee_pct": 2.0
+    },
+    {
+      "transaction_id": "pay_100059",
+      "ledger_amount": 11673.18,
+      "bank_amount": 11439.72,
+      "bank_ref": "stl_200059",
+      "match_type": "exact_reference",
+      "fee_pct": 2.0
+    },
+    {
+      "transaction_id": "pay_100063",
+      "ledger_amount": 9598.53,
+      "bank_amount": 9406.56,
+      "bank_ref": "stl_200063",
+      "match_type": "exact_reference",
+      "fee_pct": 2.0
+    },
+    {
+      "transaction_id": "pay_100065",
+      "ledger_amount": 16614.41,
+      "bank_amount": 16282.12,
+      "bank_ref": "stl_200065",
+      "match_type": "exact_reference",
+      "fee_pct": 2.0
+    },
+    {
+      "transaction_id": "pay_100027",
+      "ledger_amount": 10105.13,
+      "bank_amount": 9903.03,
+      "bank_ref": "stl_200027",
+      "match_type": "fuzzy_amount_date",
+      "fee_pct": 2.0
+    },
+    {
+      "transaction_id": "pay_100035",
+      "ledger_amount": 19096.66,
+      "bank_amount": 18714.73,
+      "bank_ref": "stl_200035",
+      "match_type": "fuzzy_amount_date",
+      "fee_pct": 2.0
+    },
+    {
+      "transaction_id": "pay_100040",
+      "ledger_amount": 6173.62,
+      "bank_amount": 6050.15,
+      "bank_ref": "stl_200040",
+      "match_type": "fuzzy_amount_date",
+      "fee_pct": 2.0
+    },
+    {
+      "transaction_id": "pay_100041",
+      "ledger_amount": 18351.31,
+      "bank_amount": 17984.28,
+      "bank_ref": "stl_200041",
+      "match_type": "fuzzy_amount_date",
+      "fee_pct": 2.0
+    },
+    {
+      "transaction_id": "pay_100044",
+      "ledger_amount": 10693.82,
+      "bank_amount": 10479.94,
+      "bank_ref": "stl_200044",
+      "match_type": "fuzzy_amount_date",
+      "fee_pct": 2.0
+    },
+    {
+      "transaction_id": "pay_100060",
+      "ledger_amount": 2628.14,
+      "bank_amount": 2575.58,
+      "bank_ref": "stl_200060",
+      "match_type": "fuzzy_amount_date",
+      "fee_pct": 2.0
+    },
+    {
+      "transaction_id": "pay_100062",
+      "ledger_amount": 12137.69,
+      "bank_amount": 11894.94,
+      "bank_ref": "stl_200062",
+      "match_type": "fuzzy_amount_date",
+      "fee_pct": 2.0
+    },
+    {
+      "transaction_id": "pay_100064",
+      "ledger_amount": 7274.18,
+      "bank_amount": 7128.7,
+      "bank_ref": "stl_200064",
+      "match_type": "fuzzy_amount_date",
+      "fee_pct": 2.0
+    }
+  ],
+  "exceptions": [
+    {
+      "type": "AMOUNT_MISMATCH",
+      "transaction_id": "pay_100003",
+      "ledger_amount": 22326.05,
+      "closest_bank_amount": 15736.62,
+      "bank_ref": "stl_200001",
+      "reason": "Ledger shows 22326.05 but nearest bank credit is 15736.62 \u2014 gap is larger than a normal gateway fee (possible partial refund not reflected in ledger)."
+    },
+    {
+      "type": "AMOUNT_MISMATCH",
+      "transaction_id": "pay_100010",
+      "ledger_amount": 2598.57,
+      "closest_bank_amount": 3910.65,
+      "bank_ref": "stl_200029",
+      "reason": "Ledger shows 2598.57 but nearest bank credit is 3910.65 \u2014 gap is larger than a normal gateway fee (possible partial refund not reflected in ledger)."
+    },
+    {
+      "type": "AMOUNT_MISMATCH",
+      "transaction_id": "pay_100014",
+      "ledger_amount": 17673.38,
+      "closest_bank_amount": 12579.52,
+      "bank_ref": "stl_200028b",
+      "reason": "Ledger shows 17673.38 but nearest bank credit is 12579.52 \u2014 gap is larger than a normal gateway fee (possible partial refund not reflected in ledger)."
+    },
+    {
+      "type": "AMOUNT_MISMATCH",
+      "transaction_id": "pay_100018",
+      "ledger_amount": 16271.28,
+      "closest_bank_amount": 3810.82,
+      "bank_ref": "stl_300001",
+      "reason": "Ledger shows 16271.28 but nearest bank credit is 3810.82 \u2014 gap is larger than a normal gateway fee (possible partial refund not reflected in ledger)."
+    },
+    {
+      "type": "AMOUNT_MISMATCH",
+      "transaction_id": "pay_100020",
+      "ledger_amount": 6894.71,
+      "closest_bank_amount": 2980.06,
+      "bank_ref": "stl_200032b",
+      "reason": "Ledger shows 6894.71 but nearest bank credit is 2980.06 \u2014 gap is larger than a normal gateway fee (possible partial refund not reflected in ledger)."
+    },
+    {
+      "type": "MISSING_SETTLEMENT",
+      "transaction_id": "pay_100025",
+      "ledger_amount": 3662.83,
+      "reason": "No matching bank credit found within tolerance \u2014 payment may still be in transit or lost."
+    },
+    {
+      "type": "AMOUNT_MISMATCH",
+      "transaction_id": "pay_100042",
+      "ledger_amount": 19192.69,
+      "closest_bank_amount": 6957.15,
+      "bank_ref": "stl_200007b",
+      "reason": "Ledger shows 19192.69 but nearest bank credit is 6957.15 \u2014 gap is larger than a normal gateway fee (possible partial refund not reflected in ledger)."
+    },
+    {
+      "type": "MISSING_SETTLEMENT",
+      "transaction_id": "pay_100052",
+      "ledger_amount": 23400.75,
+      "reason": "No matching bank credit found within tolerance \u2014 payment may still be in transit or lost."
+    },
+    {
+      "type": "AMOUNT_MISMATCH",
+      "transaction_id": "pay_100055",
+      "ledger_amount": 21623.15,
+      "closest_bank_amount": 4859.19,
+      "bank_ref": "stl_300000",
+      "reason": "Ledger shows 21623.15 but nearest bank credit is 4859.19 \u2014 gap is larger than a normal gateway fee (possible partial refund not reflected in ledger)."
+    },
+    {
+      "type": "AMOUNT_MISMATCH",
+      "transaction_id": "pay_100013",
+      "ledger_amount": 20769.24,
+      "closest_bank_amount": 14581.53,
+      "bank_ref": "stl_200013",
+      "reason": "Reference matched (stl_200013), but ledger shows 20769.24 vs bank 14581.53 \u2014 a 29.8% gap is too large to be a normal gateway fee. Likely a partial refund or credit not reflected in the ledger."
+    },
+    {
+      "type": "AMOUNT_MISMATCH",
+      "transaction_id": "pay_100015",
+      "ledger_amount": 19372.09,
+      "closest_bank_amount": 12263.39,
+      "bank_ref": "stl_200015",
+      "reason": "Reference matched (stl_200015), but ledger shows 19372.09 vs bank 12263.39 \u2014 a 36.7% gap is too large to be a normal gateway fee. Likely a partial refund or credit not reflected in the ledger."
+    },
+    {
+      "type": "AMOUNT_MISMATCH",
+      "transaction_id": "pay_100021",
+      "ledger_amount": 5646.46,
+      "closest_bank_amount": 3275.89,
+      "bank_ref": "stl_200021",
+      "reason": "Reference matched (stl_200021), but ledger shows 5646.46 vs bank 3275.89 \u2014 a 42.0% gap is too large to be a normal gateway fee. Likely a partial refund or credit not reflected in the ledger."
+    },
+    {
+      "type": "AMOUNT_MISMATCH",
+      "transaction_id": "pay_100023",
+      "ledger_amount": 5432.37,
+      "closest_bank_amount": 3120.46,
+      "bank_ref": "stl_200023",
+      "reason": "Reference matched (stl_200023), but ledger shows 5432.37 vs bank 3120.46 \u2014 a 42.6% gap is too large to be a normal gateway fee. Likely a partial refund or credit not reflected in the ledger."
+    },
+    {
+      "type": "AMOUNT_MISMATCH",
+      "transaction_id": "pay_100031",
+      "ledger_amount": 13322.04,
+      "closest_bank_amount": 9832.99,
+      "bank_ref": "stl_200031",
+      "reason": "Reference matched (stl_200031), but ledger shows 13322.04 vs bank 9832.99 \u2014 a 26.2% gap is too large to be a normal gateway fee. Likely a partial refund or credit not reflected in the ledger."
+    },
+    {
+      "type": "AMOUNT_MISMATCH",
+      "transaction_id": "pay_100034",
+      "ledger_amount": 280.48,
+      "closest_bank_amount": 235.65,
+      "bank_ref": "stl_200034",
+      "reason": "Reference matched (stl_200034), but ledger shows 280.48 vs bank 235.65 \u2014 a 16.0% gap is too large to be a normal gateway fee. Likely a partial refund or credit not reflected in the ledger."
+    },
+    {
+      "type": "AMOUNT_MISMATCH",
+      "transaction_id": "pay_100039",
+      "ledger_amount": 2974.32,
+      "closest_bank_amount": 1736.43,
+      "bank_ref": "stl_200039",
+      "reason": "Reference matched (stl_200039), but ledger shows 2974.32 vs bank 1736.43 \u2014 a 41.6% gap is too large to be a normal gateway fee. Likely a partial refund or credit not reflected in the ledger."
+    },
+    {
+      "type": "AMOUNT_MISMATCH",
+      "transaction_id": "pay_100046",
+      "ledger_amount": 16316.98,
+      "closest_bank_amount": 8849.54,
+      "bank_ref": "stl_200046",
+      "reason": "Reference matched (stl_200046), but ledger shows 16316.98 vs bank 8849.54 \u2014 a 45.8% gap is too large to be a normal gateway fee. Likely a partial refund or credit not reflected in the ledger."
+    },
+    {
+      "type": "AMOUNT_MISMATCH",
+      "transaction_id": "pay_100053",
+      "ledger_amount": 6226.33,
+      "closest_bank_amount": 3318.72,
+      "bank_ref": "stl_200053",
+      "reason": "Reference matched (stl_200053), but ledger shows 6226.33 vs bank 3318.72 \u2014 a 46.7% gap is too large to be a normal gateway fee. Likely a partial refund or credit not reflected in the ledger."
+    },
+    {
+      "type": "AMOUNT_MISMATCH",
+      "transaction_id": "pay_100061",
+      "ledger_amount": 24231.11,
+      "closest_bank_amount": 15562.31,
+      "bank_ref": "stl_200061",
+      "reason": "Reference matched (stl_200061), but ledger shows 24231.11 vs bank 15562.31 \u2014 a 35.8% gap is too large to be a normal gateway fee. Likely a partial refund or credit not reflected in the ledger."
+    },
+    {
+      "type": "UNEXPLAINED_BANK_CREDIT",
+      "bank_ref": "stl_200017",
+      "bank_amount": 5287.85,
+      "reason": "Bank credit could not be tied to any ledger transaction within tolerance."
+    },
+    {
+      "type": "UNEXPLAINED_BANK_CREDIT",
+      "bank_ref": "stl_300003",
+      "bank_amount": 725.64,
+      "reason": "Bank credit with no corresponding ledger entry \u2014 needs manual review."
+    },
+    {
+      "type": "UNEXPLAINED_BANK_CREDIT",
+      "bank_ref": "stl_300002",
+      "bank_amount": 3865.89,
+      "reason": "Bank credit with no corresponding ledger entry \u2014 needs manual review."
+    }
+  ],
+  "ai_actions": {
+    "executive_summary": "This reconciliation batch shows a 70.8% match rate by count and 69.7% by amount, with 22 exceptions requiring attention. The majority of issues are large amount mismatches, suggesting unrecorded partial refunds or ledger errors, alongside some missing settlements and unexplained bank credits. Significant manual review is needed to resolve these discrepancies.",
+    "exception_actions": [
+      {
+        "reference": "pay_100003",
+        "recommended_action": "Investigate potential partial refund or ledger error.",
+        "draft_message": "Please investigate transaction pay_100003 (Ledger: 22326.05, Bank: 15736.62). The large difference suggests a possible partial refund not recorded or a ledger error."
+      },
+      {
+        "reference": "pay_100010",
+        "recommended_action": "Investigate potential partial refund or ledger error.",
+        "draft_message": "Please investigate transaction pay_100010 (Ledger: 2598.57, Bank: 3910.65). The large difference suggests a possible partial refund not recorded or a ledger error."
+      },
+      {
+        "reference": "pay_100014",
+        "recommended_action": "Investigate potential partial refund or ledger error.",
+        "draft_message": "Please investigate transaction pay_100014 (Ledger: 17673.38, Bank: 12579.52). The large difference suggests a possible partial refund not recorded or a ledger error."
+      },
+      {
+        "reference": "pay_100018",
+        "recommended_action": "Investigate potential partial refund or ledger error.",
+        "draft_message": "Please investigate transaction pay_100018 (Ledger: 16271.28, Bank: 3810.82). The large difference suggests a possible partial refund not recorded or a ledger error."
+      },
+      {
+        "reference": "pay_100020",
+        "recommended_action": "Investigate potential partial refund or ledger error.",
+        "draft_message": "Please investigate transaction pay_100020 (Ledger: 6894.71, Bank: 2980.06). The large difference suggests a possible partial refund not recorded or a ledger error."
+      },
+      {
+        "reference": "pay_100025",
+        "recommended_action": "Trace missing settlement with payment processor/bank.",
+        "draft_message": "Transaction pay_100025 for 3662.83 is missing a bank settlement. Please check its status with the payment processor or bank."
+      },
+      {
+        "reference": "pay_100042",
+        "recommended_action": "Investigate potential partial refund or ledger error.",
+        "draft_message": "Please investigate transaction pay_100042 (Ledger: 19192.69, Bank: 6957.15). The large difference suggests a possible partial refund not recorded or a ledger error."
+      },
+      {
+        "reference": "pay_100052",
+        "recommended_action": "Trace missing settlement with payment processor/bank.",
+        "draft_message": "Transaction pay_100052 for 23400.75 is missing a bank settlement. Please check its status with the payment processor or bank."
+      },
+      {
+        "reference": "pay_100055",
+        "recommended_action": "Investigate potential partial refund or ledger error.",
+        "draft_message": "Please investigate transaction pay_100055 (Ledger: 21623.15, Bank: 4859.19). The large difference suggests a possible partial refund not recorded or a ledger error."
+      },
+      {
+        "reference": "pay_100013",
+        "recommended_action": "Investigate partial refund or credit not reflected in ledger.",
+        "draft_message": "For transaction pay_100013 (Bank Ref: stl_200013), ledger amount 20769.24 differs significantly from bank credit 14581.53. Please check for unrecorded partial refunds or credits."
+      },
+      {
+        "reference": "pay_100015",
+        "recommended_action": "Investigate partial refund or credit not reflected in ledger.",
+        "draft_message": "For transaction pay_100015 (Bank Ref: stl_200015), ledger amount 19372.09 differs significantly from bank credit 12263.39. Please check for unrecorded partial refunds or credits."
+      },
+      {
+        "reference": "pay_100021",
+        "recommended_action": "Investigate partial refund or credit not reflected in ledger.",
+        "draft_message": "For transaction pay_100021 (Bank Ref: stl_200021), ledger amount 5646.46 differs significantly from bank credit 3275.89. Please check for unrecorded partial refunds or credits."
+      },
+      {
+        "reference": "pay_100023",
+        "recommended_action": "Investigate partial refund or credit not reflected in ledger.",
+        "draft_message": "For transaction pay_100023 (Bank Ref: stl_200023), ledger amount 5432.37 differs significantly from bank credit 3120.46. Please check for unrecorded partial refunds or credits."
+      },
+      {
+        "reference": "pay_100031",
+        "recommended_action": "Investigate partial refund or credit not reflected in ledger.",
+        "draft_message": "For transaction pay_100031 (Bank Ref: stl_200031), ledger amount 13322.04 differs significantly from bank credit 9832.99. Please check for unrecorded partial refunds or credits."
+      },
+      {
+        "reference": "pay_100034",
+        "recommended_action": "Investigate partial refund or credit not reflected in ledger.",
+        "draft_message": "For transaction pay_100034 (Bank Ref: stl_200034), ledger amount 280.48 differs significantly from bank credit 235.65. Please check for unrecorded partial refunds or credits."
+      },
+      {
+        "reference": "pay_100039",
+        "recommended_action": "Investigate partial refund or credit not reflected in ledger.",
+        "draft_message": "For transaction pay_100039 (Bank Ref: stl_200039), ledger amount 2974.32 differs significantly from bank credit 1736.43. Please check for unrecorded partial refunds or credits."
+      },
+      {
+        "reference": "pay_100046",
+        "recommended_action": "Investigate partial refund or credit not reflected in ledger.",
+        "draft_message": "For transaction pay_100046 (Bank Ref: stl_200046), ledger amount 16316.98 differs significantly from bank credit 8849.54. Please check for unrecorded partial refunds or credits."
+      },
+      {
+        "reference": "pay_100053",
+        "recommended_action": "Investigate partial refund or credit not reflected in ledger.",
+        "draft_message": "For transaction pay_100053 (Bank Ref: stl_200053), ledger amount 6226.33 differs significantly from bank credit 3318.72. Please check for unrecorded partial refunds or credits."
+      },
+      {
+        "reference": "pay_100061",
+        "recommended_action": "Investigate partial refund or credit not reflected in ledger.",
+        "draft_message": "For transaction pay_100061 (Bank Ref: stl_200061), ledger amount 24231.11 differs significantly from bank credit 15562.31. Please check for unrecorded partial refunds or credits."
+      },
+      {
+        "reference": "stl_200017",
+        "recommended_action": "Identify source of unexplained bank credit.",
+        "draft_message": "Bank credit stl_200017 for 5287.85 has no corresponding ledger entry. Please identify the source of this incoming payment."
+      },
+      {
+        "reference": "stl_300003",
+        "recommended_action": "Identify source of unexplained bank credit.",
+        "draft_message": "Bank credit stl_300003 for 725.64 has no corresponding ledger entry. Please identify the source of this incoming payment."
+      },
+      {
+        "reference": "stl_300002",
+        "recommended_action": "Identify source of unexplained bank credit.",
+        "draft_message": "Bank credit stl_300002 for 3865.89 has no corresponding ledger entry. Please identify the source of this incoming payment."
+      }
+    ]
+  },
+  "ai_actions_source": "gemini"
+}

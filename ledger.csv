@@ -1,0 +1,66 @@
+transaction_id,date,amount,merchant,status
+pay_100001,2026-08-01,16057.78,"Rodriguez, Figueroa and Sanchez",captured
+pay_100002,2026-08-24,5735.63,Doyle Ltd,captured
+pay_100003,2026-08-03,22326.05,"Mcclain, Miller and Henderson",captured
+pay_100004,2026-08-03,988.21,Davis and Sons,captured
+pay_100005,2026-08-18,15130.06,"Guzman, Hoffman and Baldwin",captured
+pay_100006,2026-08-14,17592.86,"Gardner, Robinson and Lawrence",captured
+pay_100007,2026-08-01,7099.13,Blake and Sons,captured
+pay_100008,2026-08-11,17513.86,"Henderson, Ramirez and Lewis",captured
+pay_100009,2026-08-11,23938.88,Garcia-James,captured
+pay_100010,2026-08-12,2598.57,Abbott-Munoz,captured
+pay_100011,2026-08-24,20216.78,Blair PLC,captured
+pay_100012,2026-08-13,24333.27,Dudley Group,captured
+pay_100013,2026-08-20,20769.24,Arnold Ltd,captured
+pay_100014,2026-08-02,17673.38,"Mcclure, Ward and Lee",captured
+pay_100015,2026-08-03,19372.09,Williams and Sons,captured
+pay_100016,2026-08-12,11444.58,Galloway-Wyatt,captured
+pay_100017,2026-08-09,5395.77,James Group,captured
+pay_100018,2026-08-20,16271.28,"Flowers, Martin and Kelly",captured
+pay_100019,2026-08-08,13446.67,"Adams, Zuniga and Wong",captured
+pay_100020,2026-08-21,6894.71,"Reid, Ferguson and Sanchez",captured
+pay_100021,2026-08-11,5646.46,Gray-Mayo,captured
+pay_100022,2026-08-11,996.09,"Watts, Robinson and Nguyen",captured
+pay_100023,2026-08-19,5432.37,Perez Inc,captured
+pay_100024,2026-08-21,12580.94,Morales-Jones,captured
+pay_100025,2026-08-24,3662.83,"Walter, Edwards and Rios",captured
+pay_100026,2026-08-19,6715.99,Wilkerson-Day,captured
+pay_100027,2026-08-08,10105.13,Baker and Sons,captured
+pay_100028,2026-08-03,12836.25,"Hoffman, Baker and Richards",captured
+pay_100029,2026-08-06,3990.46,"Ross, Robinson and Bright",captured
+pay_100030,2026-08-13,14990.94,"Snyder, Campos and Callahan",captured
+pay_100031,2026-08-18,13322.04,Burton Ltd,captured
+pay_100032,2026-08-18,3040.88,Carlson-Cruz,captured
+pay_100033,2026-08-10,8636.35,"Ferrell, Rice and Maddox",captured
+pay_100034,2026-08-24,280.48,Frazier Inc,captured
+pay_100035,2026-08-17,19096.66,"Dyer, Potter and Mack",captured
+pay_100036,2026-08-21,7601.43,Rodriguez-Graham,captured
+pay_100037,2026-08-25,3990.41,Smith-Bowen,captured
+pay_100038,2026-08-20,22978.64,"Baker, Mason and White",captured
+pay_100039,2026-08-12,2974.32,Harrell LLC,captured
+pay_100040,2026-08-19,6173.62,"Romero, Gonzalez and Brooks",captured
+pay_100041,2026-08-03,18351.31,Ryan PLC,captured
+pay_100042,2026-08-05,19192.69,George Group,captured
+pay_100043,2026-08-06,23681.85,Rodriguez LLC,captured
+pay_100044,2026-08-07,10693.82,Allen-Allen,captured
+pay_100045,2026-08-23,17308.72,"Arroyo, Miller and Tucker",captured
+pay_100046,2026-08-15,16316.98,Spence PLC,captured
+pay_100047,2026-08-11,5772.49,Anderson Group,captured
+pay_100048,2026-08-08,5906.85,"Martin, Rose and Obrien",captured
+pay_100049,2026-08-08,15851.35,Hickman Ltd,captured
+pay_100050,2026-08-03,21518.96,"Harris, Collins and Carney",captured
+pay_100051,2026-08-07,16790.65,"Brooks, Lam and Hayes",captured
+pay_100052,2026-08-19,23400.75,Walker LLC,captured
+pay_100053,2026-08-16,6226.33,Chapman and Sons,captured
+pay_100054,2026-08-12,16542.77,"Robinson, Jones and Welch",captured
+pay_100055,2026-08-02,21623.15,Jones Inc,captured
+pay_100056,2026-08-04,24607.3,Jones-Young,captured
+pay_100057,2026-08-04,8614.7,"Washington, Ryan and Cummings",captured
+pay_100058,2026-08-05,13499.89,"Johnston, Sanchez and Kennedy",captured
+pay_100059,2026-08-03,11673.18,Lee-Davis,captured
+pay_100060,2026-08-21,2628.14,Gomez-Jenkins,captured
+pay_100061,2026-08-25,24231.11,"Brown, Valdez and Lucas",captured
+pay_100062,2026-08-13,12137.69,Powell LLC,captured
+pay_100063,2026-08-13,9598.53,Wright and Sons,captured
+pay_100064,2026-08-23,7274.18,"West, Henderson and Ramirez",captured
+pay_100065,2026-08-16,16614.41,Baxter Inc,captured
